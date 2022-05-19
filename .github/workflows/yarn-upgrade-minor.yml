@@ -28,11 +28,11 @@ jobs:
       - name: execute py script # run the run.py to get the latest data
         run: |
           python replace.py
-      - uses: actions-js/push@main
+      - uses: actions-js/push@master
         with:
           github_token: ${{ secrets.TOKEN_APP }}
           empty: false
-          branch: master
+          branch: main
           message: 'update lib via action'
       - uses: dawidd6/action-send-mail@v3
         with:
